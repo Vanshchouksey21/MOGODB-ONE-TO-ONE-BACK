@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const {datasave} = require('../Controller/AuthorController');
+const {datasave , getAllBooks} = require('../Controller/AuthorController');
 
 
 router.post('/datasave'  ,datasave);
+
+router.get('/getdata', getAllBooks);
 
 module.exports = router;
